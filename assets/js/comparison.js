@@ -1,16 +1,16 @@
 
-
-const comparison = document.querySelector('.comparison'),
-      comparison_close = document.querySelector('.comparison-close'),
-      comparison_btn = document.querySelectorAll('.comparison-btn');
-
-
-comparison_btn.forEach(btn => {
-  btn.addEventListener('click', () => {
-    comparison.classList.add('showComparison')
-  });
+$('.comparison-btn').click(function() {
+  // event.preventDefault();
+  $(this).toggleClass('active')
+  $('.comparison-num .count').text($('.comparison-btn.active').length);
+  if ($('.comparison-btn.active').length) {
+    $('.comparison').addClass('showComparison');
+} else {
+    $('.comparison').removeClass('showComparison');
+}
 });
 
-comparison_close.addEventListener('click', () => {
-  comparison.classList.remove('showComparison');
+
+$('.comparison-close').click(function() {
+  $('.comparison').removeClass('showComparison');
 });

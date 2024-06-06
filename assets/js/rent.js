@@ -87,4 +87,4 @@ function setSuccesFor(input) {
 
 
 // input mask
-$("#phone2").inputmask({"mask": "+7(999) 999-99-99"});
+// $("#phone2").inputmask({"mask": "+7(999) 999-99-99"});

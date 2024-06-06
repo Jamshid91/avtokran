@@ -1,5 +1,5 @@
 const block1 = new Swiper('.swiper-block1', {
-  loop: false,
+  loop: true,
   spaceBetween: 0,
   simulateTouch:false, 
   allowTouchMove: false,
@@ -12,10 +12,10 @@ const block1 = new Swiper('.swiper-block1', {
       el: ".swiper-pagination-block1",
       clickable: true,
     },
-    effect: "fade",
-    fadeEffect: {
-      crossFade: true,
-    },
+    // effect: "fade",
+    // fadeEffect: {
+    //   crossFade: true,
+    // },
 });
 
 const sliders = document.querySelectorAll('.swiper-slide');
@@ -24,8 +24,10 @@ const pagination = document.querySelector('.swiper-pagination-block1');
 const next = document.querySelector('.swiper-next-block1');
 const prev = document.querySelector('.swiper-prev-block1');
 
-const [slider1, slider2, slider3] = sliders;
+const [slider1, slider2, slider3, slider4, slider5, slider6, slider7] = sliders;
 const [dote1, dote2, dote3] = dotes;
+
+console.log(sliders)
 
 next.addEventListener('click', () => {
   funcSwip();
@@ -44,12 +46,20 @@ function funcSwip() {
     elem.classList.remove('active')
   })
   if(slider1.classList.contains('swiper-slide-active')) {
-    dote1.classList.add('active')
-  } else if(slider2.classList.contains('swiper-slide-active')) {
-    dote2.classList.add('active')
-  } else if(slider3.classList.contains('swiper-slide-active')) {
     dote3.classList.add('active')
-  }
+  } 
+  else if(slider2.classList.contains('swiper-slide-active')) {
+    dote1.classList.add('active')
+  } 
+  else if(slider3.classList.contains('swiper-slide-active')) {
+    dote2.classList.add('active')
+  } 
+  else if(slider4.classList.contains('swiper-slide-active')) {
+    dote3.classList.add('active')
+  } 
+  else if(slider5.classList.contains('swiper-slide-active')) {
+    dote1.classList.add('active')
+  } 
 }
 
 

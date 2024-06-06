@@ -138,8 +138,13 @@ body {
 
   header {
     max-width: 1440px;
-    margin: 0 auto;
-    position: relative;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    transition: 0.8s all;
     .header-box {
       width: 100%;
     }
@@ -164,6 +169,7 @@ body {
     }
     .header-nav {
       background: #fff ;
+      margin-top: -1px;
       .header-logo {
         width: 10%;
       }
@@ -276,95 +282,102 @@ body {
         }
       }
     }
+  }
 
-    .menu {
-      position: absolute;
-      top: 88px;
-      left: 0;
-      background: #fff;
-      z-index: 99;
-      width: 100%;
-      height: 80%;
-      padding-top: 46px;
-      display: none;
-      .menu-nav {
-        padding: 0 12px;
-        .nav-list {
-          text-transform: uppercase;
-          a {
-            padding: 16px 0;
-            display: flex;
-            border-bottom: 1px solid #E8E8E8;
-          }
-        }
-        .nav-list-item {
-          p {
-            text-transform: uppercase;
-            padding: 16px 0;
-            border-bottom: 1px solid #E8E8E8;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-          }
-          
-          .nav-item {
-            width: 100%;
-            background: #2A2A2A;
-            padding: 18px 32px;
-            display: none;
-            li {
-              margin-bottom: 12px;
-              color: #fff;
-              &:hover {
-                color: #F8E53B;
-              }
-              &:last-child {
-                margin-bottom: 0;
-              }
-            }
-
-          }
-        }
-      }
-      .showNavItem {
-        svg path {
-          fill: #F8E53B;
-        }
-        .nav-item {
-          display: block !important;
-        }
-
-      }
-
-      .email {
-        width: 100%;
-        height: 75px;
-        background: #5A6069;
-        font-size: 13px;
-        line-height: 15px;
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 98;
+    width: 100%;
+    height: 100%;
+    padding-top: 97px;
+    display: none;
+    overflow-y: scroll;
+    .menu-nav {
+      padding: 0 12px;
+      .nav-list {
         text-transform: uppercase;
-        color: #fff;
-        img {
-          margin-right: 5px;
+        a {
+          padding: 16px 0;
+          display: flex;
+          border-bottom: 1px solid #E8E8E8;
         }
+      }
+      .nav-list-item {
+        p {
+          text-transform: uppercase;
+          padding: 16px 0;
+          border-bottom: 1px solid #E8E8E8;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        
+        .nav-item {
+          width: 100%;
+          background: #2A2A2A;
+          padding: 18px 32px;
+          display: none;
+          li {
+            margin-bottom: 12px;
+            color: #fff;
+            &:hover {
+              color: #F8E53B;
+            }
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+        }
+      }
+    }
+    .showNavItem {
+      svg path {
+        fill: #F8E53B;
+      }
+      .nav-item {
+        display: block !important;
+      }
+
+    }
+
+    .email {
+      width: 100%;
+      min-height: 75px;
+      background: #5A6069;
+      font-size: 13px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #fff;
+      img {
+        margin-right: 5px;
       }
     }
   }
 
+  .headerSticy {
+    top: -55px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.16);
+  }
+
+  .noShadow {
+    box-shadow: none;
+  }
+
+  
+  .clickedBtn svg path {
+    fill: #F8E53B;
+  }
   .showMenu {
-    height: 100vh;
-    background: #fff;
-    .menu-btn svg path {
-      fill: #F8E53B;
-    }
-    .menu {
-      display: flex;
-    }
+    display: flex;
   }
 
   main {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 140px auto 0;
 
     .swiper-btns {
       .prev,
@@ -389,18 +402,10 @@ body {
 
     .block1 {
       background-image: linear-gradient(to bottom, #f6f6f6, #f6f6f6, #f6f6f6, #f7f6f6, #f7f6f6, #f7f6f7, #f7f7f7, #f7f7f7, #f7f7f7, #f8f8f8, #f8f8f8, #f8f8f8);
-      &-bg {
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 47px;
-        object-fit: cover;
-      }
       .swiper-btns {
         position: absolute;
         top: 30px;
-        right: 50px;
+        right: 105px;
         display: flex;
         z-index: 3;
         .prev {
@@ -434,7 +439,7 @@ body {
         background: #2A2A2A;
         position: absolute;
         bottom: 7px;
-        right: 50px;
+        right: 105px;
         z-index: 2;
         .box {
           padding: 27.5px 20px 27.5px 30px;
@@ -468,7 +473,6 @@ body {
         }
       }
       .swiper {
-        width: 95%;
         .block1-item {
           width: 100%;
           height: 635px;  
@@ -1757,7 +1761,6 @@ body {
     bottom: -100px;
     z-index: 10;
     background: #F8E53B;
-    box-shadow: 0px -50px 50px 0px rgba(0,0,0,0.15);
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
@@ -1790,6 +1793,7 @@ body {
   .showComparison {
     position: sticky;
     bottom: 0;
+    box-shadow: 0px -50px 50px 0px rgba(0,0,0,0.15);
   }
 
   

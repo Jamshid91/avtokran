@@ -193,7 +193,12 @@
           }
     }
 
+    .headerSticy {
+      top: -37px;
+    }
+
     main {
+      margin-top: 88px;
         .block1 {
             &-bg {
               display: none;

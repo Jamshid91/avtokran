@@ -165,8 +165,13 @@ input, textarea, select, button,
 
 header {
   max-width: 1440px;
-  margin: 0 auto;
-  position: relative;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  transition: 0.8s all;
 }
 header .header-box {
   width: 100%;
@@ -192,6 +197,7 @@ header .header-top .phone {
 }
 header .header-nav {
   background: #fff;
+  margin-top: -1px;
 }
 header .header-nav .header-logo {
   width: 10%;
@@ -299,29 +305,31 @@ header .header-nav .social a:first-child {
 header .header-nav .social a:last-child {
   background: #F8E53B;
 }
-header .menu {
-  position: absolute;
-  top: 88px;
+
+.menu {
+  position: fixed;
+  top: 0;
   left: 0;
   background: #fff;
-  z-index: 99;
+  z-index: 98;
   width: 100%;
-  height: 80%;
-  padding-top: 46px;
+  height: 100%;
+  padding-top: 97px;
   display: none;
+  overflow-y: scroll;
 }
-header .menu .menu-nav {
+.menu .menu-nav {
   padding: 0 12px;
 }
-header .menu .menu-nav .nav-list {
+.menu .menu-nav .nav-list {
   text-transform: uppercase;
 }
-header .menu .menu-nav .nav-list a {
+.menu .menu-nav .nav-list a {
   padding: 16px 0;
   display: flex;
   border-bottom: 1px solid #E8E8E8;
 }
-header .menu .menu-nav .nav-list-item p {
+.menu .menu-nav .nav-list-item p {
   text-transform: uppercase;
   padding: 16px 0;
   border-bottom: 1px solid #E8E8E8;
@@ -329,55 +337,61 @@ header .menu .menu-nav .nav-list-item p {
   align-items: center;
   justify-content: space-between;
 }
-header .menu .menu-nav .nav-list-item .nav-item {
+.menu .menu-nav .nav-list-item .nav-item {
   width: 100%;
   background: #2A2A2A;
   padding: 18px 32px;
   display: none;
 }
-header .menu .menu-nav .nav-list-item .nav-item li {
+.menu .menu-nav .nav-list-item .nav-item li {
   margin-bottom: 12px;
   color: #fff;
 }
-header .menu .menu-nav .nav-list-item .nav-item li:hover {
+.menu .menu-nav .nav-list-item .nav-item li:hover {
   color: #F8E53B;
 }
-header .menu .menu-nav .nav-list-item .nav-item li:last-child {
+.menu .menu-nav .nav-list-item .nav-item li:last-child {
   margin-bottom: 0;
 }
-header .menu .showNavItem svg path {
+.menu .showNavItem svg path {
   fill: #F8E53B;
 }
-header .menu .showNavItem .nav-item {
+.menu .showNavItem .nav-item {
   display: block !important;
 }
-header .menu .email {
+.menu .email {
   width: 100%;
-  height: 75px;
+  min-height: 75px;
   background: #5A6069;
   font-size: 13px;
   line-height: 15px;
   text-transform: uppercase;
   color: #fff;
 }
-header .menu .email img {
+.menu .email img {
   margin-right: 5px;
 }
 
-.showMenu {
-  height: 100vh;
-  background: #fff;
+.headerSticy {
+  top: -55px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.16);
 }
-.showMenu .menu-btn svg path {
+
+.noShadow {
+  box-shadow: none;
+}
+
+.clickedBtn svg path {
   fill: #F8E53B;
 }
-.showMenu .menu {
+
+.showMenu {
   display: flex;
 }
 
 main {
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 140px auto 0;
 }
 main .swiper-btns .prev,
 main .swiper-btns .next {
@@ -402,18 +416,10 @@ main .swiper-btns .next:hover svg path {
 main .block1 {
   background-image: linear-gradient(to bottom, #f6f6f6, #f6f6f6, #f6f6f6, #f7f6f6, #f7f6f6, #f7f6f7, #f7f7f7, #f7f7f7, #f7f7f7, #f8f8f8, #f8f8f8, #f8f8f8);
 }
-main .block1-bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 47px;
-  object-fit: cover;
-}
 main .block1 .swiper-btns {
   position: absolute;
   top: 30px;
-  right: 50px;
+  right: 105px;
   display: flex;
   z-index: 3;
 }
@@ -445,7 +451,7 @@ main .block1 .item-box {
   background: #2A2A2A;
   position: absolute;
   bottom: 7px;
-  right: 50px;
+  right: 105px;
   z-index: 2;
 }
 main .block1 .item-box .box {
@@ -477,9 +483,6 @@ main .block1 .item-box .box .dote {
 }
 main .block1 .item-box .box .dote.active {
   background: #F8E53B;
-}
-main .block1 .swiper {
-  width: 95%;
 }
 main .block1 .swiper .block1-item {
   width: 100%;
@@ -1671,7 +1674,6 @@ footer .footer-bottom {
   bottom: -100px;
   z-index: 10;
   background: #F8E53B;
-  box-shadow: 0px -50px 50px 0px rgba(0, 0, 0, 0.15);
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -1704,6 +1706,7 @@ footer .footer-bottom {
 .showComparison {
   position: sticky;
   bottom: 0;
+  box-shadow: 0px -50px 50px 0px rgba(0, 0, 0, 0.15);
 }
 
 .close {
@@ -1959,6 +1962,12 @@ footer .footer-bottom {
   }
   header .header-nav .social a svg {
     width: 21px;
+  }
+  .headerSticy {
+    top: -37px;
+  }
+  main {
+    margin-top: 88px;
   }
   main .block1-bg {
     display: none;

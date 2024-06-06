@@ -516,6 +516,31 @@
       width: 49%;
     }
   }
+
+  
+  .popUp-thanks {
+    .popUp-content {
+      width: 100%;
+    }
+    .popUp-close {
+      top: 18px;
+      right: 20px;
+      cursor: pointer;
+    }
+    .thanks {
+      min-height: 215px;
+      padding: 50px 12px 30px;
+      background: #232323;
+      border-radius: 4px;
+      .title-text {
+        font-size: 30px;
+        line-height: 36px;
+      }
+      .thanks-text {
+        margin-top: 20px;
+      }
+    }
+  }
 }
 
 @media (max-width: 576px) {
@@ -883,6 +908,7 @@
         }
       }
     }
+
 }
 
 @media (max-width: 420px) {

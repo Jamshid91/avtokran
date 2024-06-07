@@ -391,7 +391,7 @@ header .header-nav .social a:last-child {
 
 main {
   max-width: 1440px;
-  margin: 140px auto 0;
+  margin: 135px auto 0;
 }
 main .swiper-btns .prev,
 main .swiper-btns .next {
@@ -493,9 +493,17 @@ main .block1 .swiper .block1-item .item-bg {
   bottom: 0;
   right: 0;
   height: 100%;
-  width: 100%;
+  width: 96%;
   object-fit: cover;
   object-position: right;
+}
+main .block1 .swiper .block1-item .block1-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 4%;
+  object-fit: cover;
 }
 main .block1 .swiper .block1-item .item-title {
   font-size: 85px;

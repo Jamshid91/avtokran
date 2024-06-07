@@ -110,13 +110,13 @@
 
     <main>
         <div class="block1 position-relative">
-            <!-- <img src="assets/img/png/block1-bg.png" alt="" class="block1-bg"> -->
            <div class="swiper swiper-block1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="block1-item position-relative d-flex align-items-lg-end">
                             <img src="assets/img/png/w1.png" alt="" class="item-bg d-none d-lg-block">
                             <img src="assets/img/png/w1.1.png" alt="" class="item-bg d-lg-none">
+                            <img src="assets/img/png/block1-bg.png" alt="" class="block1-bg">
                             <div class="container position-relative ">
                                 <div class="row">
                                     <div class="col-12">
@@ -136,6 +136,7 @@
                         <div class="block1-item position-relative d-flex align-items-lg-end">
                             <img src="assets/img/png/w2.png" alt="" class="item-bg d-none d-lg-block">
                             <img src="assets/img/png/w2.1.png" alt="" class="item-bg d-lg-none">
+                            <img src="assets/img/png/block1-bg.png" alt="" class="block1-bg">
                             <div class="container position-relative ">
                                 <div class="row">
                                     <div class="col-12">
@@ -155,6 +156,7 @@
                         <div class="block1-item position-relative d-flex align-items-lg-end">
                             <img src="assets/img/png/w3.png" alt="" class="item-bg d-none d-lg-block">
                             <img src="assets/img/png/w3.1.png" alt="" class="item-bg d-lg-none">
+                            <img src="assets/img/png/block1-bg.png" alt="" class="block1-bg">
                             <div class="container position-relative ">
                                 <div class="row">
                                     <div class="col-12">
@@ -746,7 +748,7 @@
                         </div>
                         <div class="input-box">
                             <span class="input-name">Номер телефона</span>
-                            <input type="text" class="form__inp" id="phone2" name="Телефон" placeholder="+7">
+                            <input type="text" class="form__inp" id="phone2" name="Телефон" placeholder="+7" onkeypress='return event.charCode >= 43 && event.charCode <= 57'>
                             <small></small>
                             <div class="test">
                                 <img src="assets/img/svg/success.svg" alt="">

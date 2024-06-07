@@ -377,7 +377,7 @@ body {
 
   main {
     max-width: 1440px;
-    margin: 140px auto 0;
+    margin: 135px auto 0;
 
     .swiper-btns {
       .prev,
@@ -481,9 +481,17 @@ body {
             bottom: 0;
             right: 0;
             height: 100%;
-            width: 100%;
+            width: 96%;
             object-fit: cover;
             object-position: right;
+          }
+          .block1-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 4%;
+            object-fit: cover;
           }
           .item-title {
             font-size: 85px;

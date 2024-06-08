@@ -56,6 +56,12 @@
                   line-height: 28px;
                 }
               }
+              .item1 {
+                .item-bg {
+                  width: 100%;
+                  right: 0;
+                }
+              }
             }
           }
 
@@ -191,10 +197,6 @@
               }
             }
           }
-    }
-
-    .headerSticy {
-      top: -37px;
     }
 
     main {

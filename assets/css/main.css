@@ -491,8 +491,8 @@ main .block1 .swiper .block1-item .item-bg {
   position: absolute;
   bottom: 0;
   right: 0;
+  width: 100%;
   height: 100%;
-  width: 96%;
   object-fit: cover;
   object-position: right;
 }
@@ -539,6 +539,10 @@ main .block1 .swiper .block1-item .info .info-item {
   border-radius: 10px;
   overflow: hidden;
   padding: 5px 15px 5px 10px;
+}
+main .block1 .swiper .item1 .item-bg {
+  width: 97%;
+  right: 3%;
 }
 main .block1 .swiper .swiper-slide:first-child .block1-item .info {
   clip-path: polygon(90% 0, 100% 50%, 100% 100%, 0 100%, 0 0);
@@ -1881,6 +1885,10 @@ footer .footer-bottom {
     font-size: 24px;
     line-height: 28px;
   }
+  main .block1 .swiper .item1 .item-bg {
+    width: 100%;
+    right: 0;
+  }
   main .block9-box {
     grid-template-columns: repeat(10, 1fr);
     grid-gap: 12px;
@@ -1969,9 +1977,6 @@ footer .footer-bottom {
   }
   header .header-nav .social a svg {
     width: 21px;
-  }
-  .headerSticy {
-    top: -37px;
   }
   main {
     margin-top: 88px;

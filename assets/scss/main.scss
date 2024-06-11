@@ -530,13 +530,6 @@ body {
           }
         }
 
-        .item1 {
-          .item-bg {
-            width: 97%;
-            right: 3%;
-          }
-        }
-
         
         .swiper-slide:first-child {
           .block1-item .info {
@@ -607,7 +600,10 @@ body {
         }
         .item-info {
           width: 49%;
-          height: 100%;
+          min-height: 327px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
           .item-title {
             font-size: 20px;
             line-height: 27px;
@@ -617,7 +613,7 @@ body {
           }
           .item-list {
             width: 100%;
-            margin: 30px 10px;
+            margin: 25px 0 30px;
             li {
               position: relative;
               display: flex; 
@@ -672,7 +668,6 @@ body {
           }
 
           .item-btns {
-            margin-top: 33px;
             font-size: 14px;
             line-height: 16px;
             font-weight: 600;

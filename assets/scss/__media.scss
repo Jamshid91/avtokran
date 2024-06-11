@@ -56,12 +56,6 @@
                   line-height: 28px;
                 }
               }
-              .item1 {
-                .item-bg {
-                  width: 100%;
-                  right: 0;
-                }
-              }
             }
           }
 
@@ -104,6 +98,10 @@
         }
         .item-info {
           width: 100%;
+          min-height: auto;
+          .item-btns {
+            margin-top: 20px;
+          }
         }
       }
     }

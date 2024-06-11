@@ -540,10 +540,6 @@ main .block1 .swiper .block1-item .info .info-item {
   overflow: hidden;
   padding: 5px 15px 5px 10px;
 }
-main .block1 .swiper .item1 .item-bg {
-  width: 97%;
-  right: 3%;
-}
 main .block1 .swiper .swiper-slide:first-child .block1-item .info {
   clip-path: polygon(90% 0, 100% 50%, 100% 100%, 0 100%, 0 0);
 }
@@ -607,7 +603,10 @@ main .block2 .block2-item .item-img .comparison-btn {
 }
 main .block2 .block2-item .item-info {
   width: 49%;
-  height: 100%;
+  min-height: 327px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 main .block2 .block2-item .item-info .item-title {
   font-size: 20px;
@@ -618,7 +617,7 @@ main .block2 .block2-item .item-info .item-title {
 }
 main .block2 .block2-item .item-info .item-list {
   width: 100%;
-  margin: 30px 10px;
+  margin: 25px 0 30px;
 }
 main .block2 .block2-item .item-info .item-list li {
   position: relative;
@@ -669,7 +668,6 @@ main .block2 .block2-item .item-info .item-price .price .price-info {
   color: rgba(90, 96, 105, 0.6);
 }
 main .block2 .block2-item .item-info .item-btns {
-  margin-top: 33px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 600;
@@ -1885,10 +1883,6 @@ footer .footer-bottom {
     font-size: 24px;
     line-height: 28px;
   }
-  main .block1 .swiper .item1 .item-bg {
-    width: 100%;
-    right: 0;
-  }
   main .block9-box {
     grid-template-columns: repeat(10, 1fr);
     grid-gap: 12px;
@@ -1913,6 +1907,10 @@ footer .footer-bottom {
   }
   main .block2 .block2-item .item-info {
     width: 100%;
+    min-height: auto;
+  }
+  main .block2 .block2-item .item-info .item-btns {
+    margin-top: 20px;
   }
   main .block3 .block3-item {
     width: 50%;
